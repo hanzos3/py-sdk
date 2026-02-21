@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 from minio import Minio
 
 client = Minio(
-    endpoint="play.min.io",
-    access_key="Q3AM3UQ867SPQQA43P2F",
-    secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+    endpoint="s3.hanzo.ai",
+    access_key="YOUR-ACCESS-KEY",
+    secret_key="YOUR-SECRET-KEY",
 )
 
 client.delete_bucket_lifecycle(bucket_name="my-bucket")

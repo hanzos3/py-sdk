@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,9 +20,9 @@ from minio import Minio
 from minio.models import PostPolicy
 
 client = Minio(
-    endpoint="play.min.io",
-    access_key="Q3AM3UQ867SPQQA43P2F",
-    secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+    endpoint="s3.hanzo.ai",
+    access_key="YOUR-ACCESS-KEY",
+    secret_key="YOUR-SECRET-KEY",
 )
 
 policy = PostPolicy("my-bucket", datetime.utcnow() + timedelta(days=10))
@@ -33,7 +33,7 @@ form_data = client.presigned_post_policy(policy)
 
 args = " ".join([f"-F {k}={v}" for k, v in form_data.items()])
 curl_cmd = (
-    "curl -X POST https://play.min.io/my-bucket "
+    "curl -X POST https://s3.hanzo.ai/my-bucket "
     f"{args} -F file=@<FILE> -F key=<OBJECT-NAME>"
 )
 print(curl_cmd)

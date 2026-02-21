@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ from . import __title__, __version__
 from .compat import HTTPHeaderDict, HTTPQueryDict, quote
 
 _DEFAULT_USER_AGENT = (
-    f"MinIO ({platform.system()}; {platform.machine()}) "
+    f"Hanzo-S3 ({platform.system()}; {platform.machine()}) "
     f"{__title__}/{__version__}"
 )
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -259,7 +259,7 @@ class EnvAWSProvider(Provider):
 
 
 class EnvMinioProvider(Provider):
-    """Credential provider from MinIO environment variables."""
+    """Credential provider from Hanzo S3 environment variables."""
 
     def retrieve(self) -> Credentials:
         """Retrieve credentials."""
@@ -324,7 +324,7 @@ class AWSConfigProvider(Provider):
 
 
 class MinioClientConfigProvider(Provider):
-    """Credential provider from MinIO Client configuration file."""
+    """Credential provider from Hanzo S3 Client configuration file."""
 
     def __init__(
             self,
@@ -342,7 +342,7 @@ class MinioClientConfigProvider(Provider):
         self._alias = alias or os.environ.get("MINIO_ALIAS") or "s3"
 
     def retrieve(self) -> Credentials:
-        """Retrieve credential value from MinIO client configuration file."""
+        """Retrieve credential value from Hanzo S3 client configuration file."""
         try:
             with open(self._filename, encoding="utf-8") as conf_file:
                 config = json.load(conf_file)
@@ -354,7 +354,7 @@ class MinioClientConfigProvider(Provider):
             creds = aliases.get(self._alias)
             if not creds:
                 raise ValueError(
-                    f"alias {self._alias} not found in MinIO client"
+                    f"alias {self._alias} not found in Hanzo S3 client"
                     f"configuration file {self._filename}"
                 )
             return Credentials(creds.get("accessKey"), creds.get("secretKey"))

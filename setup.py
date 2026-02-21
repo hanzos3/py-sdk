@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,16 +42,16 @@ readme = (ROOT / "README.md").read_text(encoding="utf-8")
 setup(
     name="minio",
     version=version,
-    description="MinIO Python SDK for Amazon S3 Compatible Cloud Storage",
+    description="Hanzo S3 Python SDK for Amazon S3 Compatible Cloud Storage",
     long_description=readme,
     long_description_content_type="text/markdown",
-    author="MinIO, Inc.",
-    author_email="dev@min.io",
-    url="https://github.com/minio/minio-py",
+    author="Hanzo AI, Inc.",
+    author_email="dev@hanzo.ai",
+    url="https://github.com/hanzos3/py-sdk",
     project_urls={
-        "Source": "https://github.com/minio/minio-py",
-        "Issues": "https://github.com/minio/minio-py/issues",
-        "Changelog": "https://github.com/minio/minio-py/releases",
+        "Source": "https://github.com/hanzos3/py-sdk",
+        "Issues": "https://github.com/hanzos3/py-sdk/issues",
+        "Changelog": "https://github.com/hanzos3/py-sdk/releases",
     },
     license="Apache-2.0",
     package_dir={"": "."},

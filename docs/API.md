@@ -1,4 +1,4 @@
-# Python Client API Reference [![Slack](https://slack.min.io/slack?type=svg)](https://slack.min.io)
+# Python Client API Reference
 
 ## 1. Constructor
 
@@ -28,20 +28,20 @@ __Example__
 from minio import Minio
 
 # Create client with anonymous access.
-client = Minio(endpoint="play.min.io")
+client = Minio(endpoint="s3.hanzo.ai")
 
 # Create client with access and secret key.
 client = Minio(
-    endpoint="s3.amazonaws.com",
+    endpoint="s3.hanzo.ai",
     access_key="ACCESS-KEY",
     secret_key="SECRET-KEY",
 )
 
 # Create client with access key and secret key with specific region.
 client = Minio(
-    endpoint="play.minio.io:9000",
-    access_key="Q3AM3UQ867SPQQA43P2F",
-    secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+    endpoint="s3.hanzo.ai",
+    access_key="YOUR-ACCESS-KEY",
+    secret_key="YOUR-SECRET-KEY",
     region="my-region",
 )
 
@@ -220,7 +220,7 @@ __Parameters__
 | `prefix`                | _Optional[str] = None_                         | Object name starts with prefix.                              |
 | `recursive`             | _bool = False_                                 | List recursively than directory structure emulation.         |
 | `start_after`           | _Optional[str] = None_                         | List objects after this key name.                            |
-| `include_user_meta`     | _bool = False_                                 | MinIO specific flag to control to include user metadata.     |
+| `include_user_meta`     | _bool = False_                                 | Hanzo S3 specific flag to control to include user metadata.  |
 | `include_version`       | _bool = False_                                 | Flag to control whether include object versions.             |
 | `use_api_v1`            | _bool = False_                                 | Flag to control to use ListObjectV1 S3 API or not.           |
 | `use_url_encoding_type` | _bool = True_                                  | Flag to control whether URL encoding type to be used or not. |
@@ -2502,6 +2502,5 @@ client.upload_snowball_objects(
 
 ## 5. Explore Further
 
-- [MinIO Golang Client SDK Quickstart Guide](https://docs.min.io/enterprise/aistor-object-store/developers/sdk/go/)
-- [MinIO Java Client SDK Quickstart Guide](https://docs.min.io/enterprise/aistor-object-store/developers/sdk/java/)
-- [MinIO JavaScript Client SDK Quickstart Guide](https://docs.min.io/enterprise/aistor-object-store/developers/sdk/javascript/)
+- [Hanzo S3 Documentation](https://hanzo.space/docs/)
+- [Hanzo S3 Python SDK Examples](https://github.com/hanzos3/py-sdk/tree/main/examples)

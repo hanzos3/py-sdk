@@ -1,17 +1,16 @@
-# Python Client API文档 [![Slack](https://slack.min.io/slack?type=svg)](https://slack.min.io)
+# Python Client API文档
 
-## 初使化MinIO Client对象。
+## 初使化 Hanzo S3 Client对象。
 
-## MinIO
+## Hanzo S3
 
 ```py
 from minio import Minio
-from minio.error import ResponseError
 
-minioClient = Minio('play.min.io',
-                  access_key='Q3AM3UQ867SPQQA43P2F',
-                  secret_key='zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG',
-                  secure=True)
+client = Minio('s3.hanzo.ai',
+               access_key='YOUR-ACCESS-KEY',
+               secret_key='YOUR-SECRET-KEY',
+               secure=True)
 ```
 
 ## AWS S3
@@ -43,7 +42,7 @@ s3Client = Minio('s3.amazonaws.com',
 
 ## 1. 构造函数
 
-<a name="MinIO"></a>
+<a name="HanzoS3"></a>
 ### Minio(endpoint, access_key=None, secret_key=None, secure=True, region=None, http_client=None)
 
 |   |
@@ -65,15 +64,14 @@ s3Client = Minio('s3.amazonaws.com',
 
 __示例__
 
-### MinIO
+### Hanzo S3
 
 ```py
 from minio import Minio
-from minio.error import ResponseError
 
-minioClient = Minio('play.min.io',
-                    access_key='Q3AM3UQ867SPQQA43P2F',
-                    secret_key='zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG')
+client = Minio('s3.hanzo.ai',
+               access_key='YOUR-ACCESS-KEY',
+               secret_key='YOUR-SECRET-KEY')
 ```
 
 ```py
@@ -532,7 +530,7 @@ minioClient.remove_all_bucket_notification('mybucket')
 <a name="listen_bucket_notification"></a>
 ### listen_bucket_notification(bucket_name, prefix, suffix, events)
 
-监听存储桶上的通知，可以额外提供前缀、后缀和时间类型来进行过滤。使用该API前不需要先设置存储桶通知。这是一个MinIO的扩展API，MinIO Server会基于过来的请求使用唯一标识符自动注册或者注销。
+监听存储桶上的通知，可以额外提供前缀、后缀和时间类型来进行过滤。使用该API前不需要先设置存储桶通知。这是一个 Hanzo S3 的扩展API，Hanzo S3 Server会基于过来的请求使用唯一标识符自动注册或者注销。
 
 当通知发生时，产生事件，调用者需要遍历读取这些事件。
 
@@ -545,7 +543,7 @@ minioClient.remove_all_bucket_notification('mybucket')
 |``suffix`` | _string_  | 过滤通知的对象名称后缀。|
 |``events`` | _list_ | 启用特定事件类型的通知。 |
 
-完整示例请看 [这里](https://raw.githubusercontent.com/minio/minio-py/master/examples/listen_notification.py)。
+完整示例请看 [这里](https://github.com/hanzos3/py-sdk/blob/main/examples/listen_bucket_notification.py)。
 
 ```py
 # Put a file with default content-type.
@@ -1044,6 +1042,5 @@ print(' '.join(curl_cmd))
 
 ## 5. 了解更多
 
-- [MinIO Golang Client SDK快速入门](https://min.io/docs/minio/linux/developers/go/minio-go.html)
-- [MinIO Java Client SDK快速入门](https://min.io/docs/minio/linux/developers/java/minio-java.html)
-- [MinIO JavaScript Client SDK快速入门](https://min.io/docs/minio/linux/developers/javascript/minio-javascript.html)
+- [Hanzo S3 Documentation](https://hanzo.space/docs/)
+- [Hanzo S3 Python SDK Examples](https://github.com/hanzos3/py-sdk/tree/main/examples)

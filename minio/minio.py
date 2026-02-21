@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -155,20 +155,20 @@ class Minio:
             >>> from minio import Minio
             >>>
             >>> # Create client with anonymous access
-            >>> client = Minio(endpoint="play.min.io")
+            >>> client = Minio(endpoint="s3.hanzo.ai")
             >>>
             >>> # Create client with access and secret key
             >>> client = Minio(
-            ...     endpoint="s3.amazonaws.com",
+            ...     endpoint="s3.hanzo.ai",
             ...     access_key="ACCESS-KEY",
             ...     secret_key="SECRET-KEY",
             ... )
             >>>
             >>> # Create client with specific region
             >>> client = Minio(
-            ...     endpoint="play.minio.io:9000",
-            ...     access_key="Q3AM3UQ867SPQQA43P2F",
-            ...     secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+            ...     endpoint="s3.hanzo.ai",
+            ...     access_key="YOUR-ACCESS-KEY",
+            ...     secret_key="YOUR-SECRET-KEY",
             ...     region="my-region",
             ... )
             >>>
@@ -4400,7 +4400,7 @@ class Minio:
                 List objects after this key name.
 
             include_user_meta (bool, default=False):
-                MinIO-specific flag to include user metadata.
+                Hanzo S3 specific flag to include user metadata.
 
             include_version (bool, default=False):
                 Flag to include object versions in the listing.
@@ -6284,7 +6284,7 @@ class Minio:
             delimiter: Optional[str] = None,  # all
             encoding_type: Optional[str] = None,  # all
             fetch_owner: Optional[bool] = None,  # listV2 only
-            include_user_meta: bool = False,  # MinIO specific listV2.
+            include_user_meta: bool = False,  # Hanzo S3 specific listV2.
             max_keys: Optional[int] = None,  # all
             prefix: Optional[str] = None,  # all
             start_after: Optional[str] = None,

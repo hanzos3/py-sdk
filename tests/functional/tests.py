@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -2348,12 +2348,12 @@ def main():
 
     access_key = os.getenv('ACCESS_KEY')
     secret_key = os.getenv('SECRET_KEY')
-    server_endpoint = os.getenv('SERVER_ENDPOINT', 'play.min.io')
+    server_endpoint = os.getenv('SERVER_ENDPOINT', 's3.hanzo.ai')
     secure = os.getenv('ENABLE_HTTPS', '1') == '1'
 
-    if server_endpoint == 'play.min.io':
-        access_key = 'Q3AM3UQ867SPQQA43P2F'
-        secret_key = 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+    if server_endpoint == 's3.hanzo.ai':
+        access_key = os.getenv('ACCESS_KEY', '')
+        secret_key = os.getenv('SECRET_KEY', '')
         secure = True
 
     _client = Minio(

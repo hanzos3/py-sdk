@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 from minio import Minio
 from minio.credentials import LdapIdentityProvider
 
-# STS endpoint usually point to MinIO server.
+# STS endpoint usually points to the Hanzo S3 server.
 sts_endpoint = "http://STS-HOST:STS-PORT/"
 
 # LDAP username.

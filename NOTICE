@@ -1,9 +1,12 @@
-MinIO Cloud Storage, (C) 2014-2023 MinIO, Inc.
+Hanzo S3 Cloud Storage, (C) 2014-2025 Hanzo AI, Inc.
 
-This product includes software developed at MinIO, Inc.
-(https://min.io/).
+This product includes software developed at Hanzo AI, Inc.
+(https://hanzo.ai/).
 
-The MinIO project contains unmodified/modified subcomponents too with
+This product is derived from MinIO (https://min.io/), which is
+licensed under the Apache License, Version 2.0.
+
+The Hanzo S3 project contains unmodified/modified subcomponents too with
 separate copyright notices and license terms. Your use of the source
 code for these subcomponents is subject to the terms and conditions
 of Apache License Version 2.0

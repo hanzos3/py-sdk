@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,13 +15,13 @@
 # limitations under the License.
 
 """
-MinIO Python SDK for Amazon S3 Compatible Cloud Storage
+Hanzo S3 Python SDK for Amazon S3 Compatible Cloud Storage
 
     >>> from minio import Minio
     >>> client = Minio(
-    ...     "play.min.io",
-    ...     access_key="Q3AM3UQ867SPQQA43P2F",
-    ...     secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+    ...     "s3.hanzo.ai",
+    ...     access_key="YOUR-ACCESS-KEY",
+    ...     secret_key="YOUR-SECRET-KEY",
     ... )
     >>> buckets = client.list_buckets()
     >>> for bucket in buckets:
@@ -29,10 +29,10 @@ MinIO Python SDK for Amazon S3 Compatible Cloud Storage
 """
 
 __title__ = "minio-py"
-__author__ = "MinIO, Inc."
+__author__ = "Hanzo AI, Inc."
 __version__ = "7.2.20"
 __license__ = "Apache 2.0"
-__copyright__ = "Copyright [2014] - [2025] MinIO, Inc."
+__copyright__ = "Copyright [2014] - [2025] Hanzo AI, Inc."
 
 # pylint: disable=unused-import
 from .error import InvalidResponseError, S3Error, ServerError

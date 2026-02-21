@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# MinIO Python Library for Amazon S3 Compatible Cloud Storage, (C)
-# [2014] - [2025] MinIO, Inc.
+# Hanzo S3 Python Library for Amazon S3 Compatible Cloud Storage, (C)
+# [2014] - [2025] Hanzo AI, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 # pylint: disable=too-many-public-methods disable=too-many-lines
 
-"""MinIO Admin Client to perform MinIO administration operations."""
+"""Hanzo S3 Admin Client to perform S3 administration operations."""
 
 from __future__ import annotations
 
@@ -107,7 +107,7 @@ def _safe_str(value: Any) -> str:
 
 
 class MinioAdmin:
-    """Client to perform MinIO administration operations."""
+    """Client to perform Hanzo S3 administration operations."""
 
     def __init__(
             self,
@@ -272,7 +272,7 @@ class MinioAdmin:
         self._trace_stream = None
 
     def service_restart(self) -> str:
-        """Restart MinIO service."""
+        """Restart Hanzo S3 service."""
         response = self._url_open(
             method="POST",
             command=_COMMAND.SERVICE,
@@ -281,7 +281,7 @@ class MinioAdmin:
         return response.data.decode()
 
     def service_stop(self) -> str:
-        """Stop MinIO service."""
+        """Stop Hanzo S3 service."""
         response = self._url_open(
             method="POST",
             command=_COMMAND.SERVICE,
@@ -290,7 +290,7 @@ class MinioAdmin:
         return response.data.decode()
 
     def update(self) -> str:
-        """Update MinIO."""
+        """Update Hanzo S3."""
         response = self._url_open(
             method="POST",
             command=_COMMAND.UPDATE,
@@ -299,7 +299,7 @@ class MinioAdmin:
         return response.data.decode()
 
     def info(self) -> str:
-        """Get MinIO server information."""
+        """Get Hanzo S3 server information."""
         response = self._url_open(
             method="GET",
             command=_COMMAND.INFO,
@@ -627,7 +627,7 @@ class MinioAdmin:
         return response.data.decode()
 
     def top_locks(self) -> str:
-        """Get a list of the 10 oldest locks on a MinIO cluster."""
+        """Get a list of the 10 oldest locks on a Hanzo S3 cluster."""
         response = self._url_open(
             method="GET",
             command=_COMMAND.TOP_LOCKS,
@@ -909,7 +909,7 @@ class MinioAdmin:
                     ] and
                     response.status in [201, 204]
             ):
-                # Older MinIO servers do not return response.
+                # Older S3 servers do not return response.
                 response.close()
                 response.release_conn()
                 return ""
