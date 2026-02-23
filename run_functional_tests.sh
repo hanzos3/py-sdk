@@ -17,7 +17,7 @@
 
 function run_minio_server() {
 	if [ ! -f tests/functional/minio ]; then
-		wget --quiet --output-document tests/functional/minio https://dl.min.io/server/minio/release/linux-amd64/minio
+		wget --quiet --output-document tests/functional/minio https://github.com/hanzoai/s3/releases/latest/download/s3-linux-amd64
 		chmod +x tests/functional/minio
 	fi
 
