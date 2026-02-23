@@ -21,7 +21,7 @@ from unittest import TestCase, mock
 from minio import Minio
 from minio.error import S3Error
 from minio.helpers import _DEFAULT_USER_AGENT
-from tests.unit.minio_mocks import MockConnection, MockResponse
+from tests.unit.s3_mocks import MockConnection, MockResponse
 
 
 class GetBucketPolicyTest(TestCase):

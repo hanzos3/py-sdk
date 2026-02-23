@@ -264,8 +264,8 @@ class EnvMinioProvider(Provider):
     def retrieve(self) -> Credentials:
         """Retrieve credentials."""
         return Credentials(
-            access_key=os.environ.get("MINIO_ACCESS_KEY") or "",
-            secret_key=os.environ.get("MINIO_SECRET_KEY") or "",
+            access_key=os.environ.get("S3_ACCESS_KEY") or "",
+            secret_key=os.environ.get("S3_SECRET_KEY") or "",
         )
 
 
@@ -339,7 +339,7 @@ class MinioClientConfigProvider(Provider):
                 "config.json",
             )
         )
-        self._alias = alias or os.environ.get("MINIO_ALIAS") or "s3"
+        self._alias = alias or os.environ.get("S3_ALIAS") or "s3"
 
     def retrieve(self) -> Credentials:
         """Retrieve credential value from Hanzo S3 client configuration file."""

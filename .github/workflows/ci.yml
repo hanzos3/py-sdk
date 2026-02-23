@@ -9,10 +9,10 @@ on:
     - master
 
 env:
-  # NOTE: MINIO_* env vars are required by the upstream server binary and cannot be renamed.
-  MINIO_ROOT_USER: minio
-  MINIO_ROOT_PASSWORD: minio123
-  MINIO_CI_CD: 1
+  # S3_* env vars for Hanzo S3 server configuration.
+  S3_ROOT_USER: minio
+  S3_ROOT_PASSWORD: minio123
+  S3_CI_CD: 1
   MINT_MODE: full
   SERVER_ENDPOINT: localhost:9000
   ACCESS_KEY: minio

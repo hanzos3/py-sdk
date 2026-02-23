@@ -21,7 +21,7 @@ from minio.error import S3Error
 from minio.helpers import _DEFAULT_USER_AGENT
 
 from .helpers import generate_error
-from .minio_mocks import MockConnection, MockResponse
+from .s3_mocks import MockConnection, MockResponse
 
 
 class GetObjectTest(TestCase):

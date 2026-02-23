@@ -20,7 +20,7 @@ from minio import Minio
 from minio.error import S3Error
 from minio.helpers import _DEFAULT_USER_AGENT
 
-from .minio_mocks import MockConnection, MockResponse
+from .s3_mocks import MockConnection, MockResponse
 
 
 class BucketExists(TestCase):

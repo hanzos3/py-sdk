@@ -49,8 +49,8 @@ class ChainedProviderTest(TestCase):
         os.environ["AWS_SECRET_ACCESS_KEY"] = "secret_aws"
         os.environ["AWS_SESSION_TOKEN"] = "token_aws"
         # prepare env for env_minio
-        os.environ["MINIO_ACCESS_KEY"] = "access_minio"
-        os.environ["MINIO_SECRET_KEY"] = "secret_minio"
+        os.environ["S3_ACCESS_KEY"] = "access_minio"
+        os.environ["S3_SECRET_KEY"] = "secret_minio"
         # create chain provider with env_aws and env_minio providers
 
         provider = ChainedProvider(
@@ -69,8 +69,8 @@ class ChainedProviderTest(TestCase):
         # clear environment
         os.environ.clear()
         # prepare env for env_minio
-        os.environ["MINIO_ACCESS_KEY"] = "access_minio"
-        os.environ["MINIO_SECRET_KEY"] = "secret_minio"
+        os.environ["S3_ACCESS_KEY"] = "access_minio"
+        os.environ["S3_SECRET_KEY"] = "secret_minio"
         # create chain provider with env_aws and env_minio providers
 
         provider = ChainedProvider(
@@ -112,8 +112,8 @@ class EnvAWSProviderTest(TestCase):
 class EnvMinioTest(TestCase):
     def test_env_minio_retrieve(self):
         os.environ.clear()
-        os.environ['MINIO_ACCESS_KEY'] = "access"
-        os.environ["MINIO_SECRET_KEY"] = "secret"
+        os.environ['S3_ACCESS_KEY'] = "access"
+        os.environ["S3_SECRET_KEY"] = "secret"
         provider = EnvMinioProvider()
         creds = provider.retrieve()
         self.assertEqual(creds.access_key, "access")
@@ -184,7 +184,7 @@ class MinioClientConfigProviderTest(TestCase):
 
     def test_file_minio_env_alias(self):
         os.environ.clear()
-        os.environ["MINIO_ALIAS"] = "play"
+        os.environ["S3_ALIAS"] = "play"
         provider = MinioClientConfigProvider(filename=CONFIG_JSON_SAMPLE)
         creds = provider.retrieve()
         self.assertEqual(creds.access_key, "Q3AM3UQ867SPQQA43P2F")
